@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Let's Discover Nature | Explore</title>
+  <meta name="description" content="Take a deeper dive into Earth's ecosystems. Learn interesting facts and scroll through our landscapes exhibition. No JavaScript.">
+  <!-- Bootstrap 5 CSS (CSS only, no JS bundle) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark custom-navbar fixed-top">
+    <div class="container">
+      <a class="navbar-brand logo" href="index.html">
+        Let's Discover <span class="gradient-text">Nature</span>
+      </a>
+      
+      <!-- Hidden Checkbox Toggle for Mobile Nav Menu -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-check d-none">
+      
+      <!-- Hamburger Icon Label -->
+      <label for="nav-toggle" class="nav-toggle-label d-lg-none">
+        <span class="hamburger"></span>
+      </label>
+      
+      <!-- Collapsible Nav Menu -->
+      <div class="nav-menu-wrapper ms-lg-auto">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="explore.html">Explore</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gallery.html">Gallery & Conservation</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section (Mini Hero) -->
+  <header class="hero-section" style="background-image: url('images/hero/mountains.jpg'); height: 50vh;">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title animate-scale-in">EXPLORE <span class="gradient-text">NATURE</span></h1>
+      <p class="fs-4 text-light mb-0 animate-fade-in-up delay-1">"Deep stories behind every landscape."</p>
+    </div>
+  </header>
+
+  <!-- Landscapes Showcase Section (Alternating layouts) -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="row justify-content-center text-center mb-5">
+        <div class="col-md-8">
+          <span class="text-uppercase tracking-wider fw-bold text-success" style="font-size: 0.9rem;">Earth Exhibition</span>
+          <h2 class="display-5 mt-2">Landscapes of Wonder</h2>
+          <p class="text-muted">Explore the unique stories, climates, and ecological structures of these iconic geographical features.</p>
+        </div>
+      </div>
+
+      <!-- Desert Row (Left Image, Right Text) -->
+      <div class="row align-items-center mb-5 pb-5 explore-row">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <div class="explore-img-wrap">
+            <img src="images/landscapes/desert.jpg" alt="Desert dunes">
+          </div>
+        </div>
+        <div class="col-md-6 ps-lg-5">
+          <span class="badge bg-success mb-2">Habitat</span>
+          <h3 class="display-6 mb-3">🏜 The Silent Deserts</h3>
+          <p class="text-muted">Deserts are areas of land that receive less than 25 centimeters of precipitation annually. Despite their hostile, scorching conditions during the daytime, they host highly specialized plants and animals that have adapted to survive with minimal water resources.</p>
+          <div class="p-3 bg-light border-start border-success border-4 rounded-end shadow-sm mt-3">
+            <strong class="text-success"><i class="fa-solid fa-lightbulb me-2"></i>Fun Fact:</strong> Many deserts become freezing cold at night because sand cannot hold heat, releasing it back into the sky immediately after the sun sets.
+          </div>
+        </div>
+      </div>
+
+      <!-- Cherry Blossom Row (Right Image, Left Text) -->
+      <div class="row align-items-center mb-5 pb-5 explore-row flex-md-row-reverse">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <div class="explore-img-wrap">
+            <img src="images/landscapes/cherry_blossom.jpg" alt="Cherry blossoms blooming">
+          </div>
+        </div>
+        <div class="col-md-6 pe-lg-5">
+          <span class="badge bg-success mb-2">Seasonal</span>
+          <h3 class="display-6 mb-3">🌸 Cherry Blossom Gardens</h3>
+          <p class="text-muted">Cherry blossoms, or Sakura, represent renewal, spring, and the transient nature of life. Their pink and white blooms paint valleys in gentle pastels, attracting millions of visitors globally who celebrate the arrival of the warm season.</p>
+          <div class="p-3 bg-light border-start border-success border-4 rounded-end shadow-sm mt-3">
+            <strong class="text-success"><i class="fa-solid fa-lightbulb me-2"></i>Fun Fact:</strong> The blossom petals are completely edible and are frequently used in traditional sweets and teas across East Asia.
+          </div>
+        </div>
+      </div>
+
+      <!-- Aurora Row (Left Image, Right Text) -->
+      <div class="row align-items-center mb-5 pb-5 explore-row">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <div class="explore-img-wrap">
+            <img src="images/landscapes/aurora.jpg" alt="Northern Lights Aurora">
+          </div>
+        </div>
+        <div class="col-md-6 ps-lg-5">
+          <span class="badge bg-success mb-2">Atmospheric</span>
+          <h3 class="display-6 mb-3">🏔 Northern Lights (Aurora Borealis)</h3>
+          <p class="text-muted">The aurora borealis is a natural light display in Earth's sky, predominantly seen in high-latitude regions. It occurs when charged particles from solar winds collide with gaseous particles in Earth's magnetic atmosphere, resulting in glowing green, pink, and violet waves.</p>
+          <div class="p-3 bg-light border-start border-success border-4 rounded-end shadow-sm mt-3">
+            <strong class="text-success"><i class="fa-solid fa-lightbulb me-2"></i>Fun Fact:</strong> Auroras occur on other planets too, including Jupiter and Saturn, where magnetic fields and solar winds are even stronger.
+          </div>
+        </div>
+      </div>
+
+      <!-- Rainbow Row (Right Image, Left Text) -->
+      <div class="row align-items-center mb-5 pb-5 explore-row flex-md-row-reverse">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <div class="explore-img-wrap">
+            <img src="images/landscapes/rainbow.jpg" alt="Rainbow over valley">
+          </div>
+        </div>
+        <div class="col-md-6 pe-lg-5">
+          <span class="badge bg-success mb-2">Optics</span>
+          <h3 class="display-6 mb-3">🌈 Atmospheric Rainbows</h3>
+          <p class="text-muted">A rainbow is a meteorological phenomenon that is caused by reflection, refraction, and dispersion of light in water droplets, resulting in a spectrum of light appearing in the sky. It takes the form of a multicoloured circular arc.</p>
+          <div class="p-3 bg-light border-start border-success border-4 rounded-end shadow-sm mt-3">
+            <strong class="text-success"><i class="fa-solid fa-lightbulb me-2"></i>Fun Fact:</strong> No two people see the exact same rainbow. Since your eyes are in a different spatial position than anyone else's, the angle of refracted light is unique to you.
+          </div>
+        </div>
+      </div>
+
+      <!-- Forest Row (Left Image, Right Text) -->
+      <div class="row align-items-center mb-5 pb-5 explore-row">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <div class="explore-img-wrap">
+            <img src="images/landscapes/forest.jpg" alt="Sunbeams in forest canopy">
+          </div>
+        </div>
+        <div class="col-md-6 ps-lg-5">
+          <span class="badge bg-success mb-2">Biosphere</span>
+          <h3 class="display-6 mb-3">🌲 Ancient Forests & Rainforests</h3>
+          <p class="text-muted">Forests cover approximately 31% of the global land area, acting as critical carbon sinks and supporting over 80% of terrestrial biodiversity. From humid tropical rainforests to temperate pine woodlands, they maintain the oxygen-carbon cycle crucial for life on Earth.</p>
+          <div class="p-3 bg-light border-start border-success border-4 rounded-end shadow-sm mt-3">
+            <strong class="text-success"><i class="fa-solid fa-lightbulb me-2"></i>Fun Fact:</strong> Over 25% of modern medicines originate from plants discovered within tropical rainforests, yet less than 1% of these plants have been fully analyzed for chemical compounds.
+          </div>
+        </div>
+      </div>
+
+      <!-- Volcano Row (Right Image, Left Text) -->
+      <div class="row align-items-center mb-5 pb-5 explore-row flex-md-row-reverse">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <div class="explore-img-wrap">
+            <img src="images/landscapes/volcano.jpg" alt="Active erupting volcano">
+          </div>
+        </div>
+        <div class="col-md-6 pe-lg-5">
+          <span class="badge bg-success mb-2">Tectonic</span>
+          <h3 class="display-6 mb-3">🌋 Active Volcanic Peaks</h3>
+          <p class="text-muted">Volcanoes are ruptures in the crust of Earth that allow hot lava, volcanic ash, and gases to escape from a magma chamber below the surface. They play an essential role in geological cooling and forming fertile soil over centuries.</p>
+          <div class="p-3 bg-light border-start border-success border-4 rounded-end shadow-sm mt-3">
+            <strong class="text-success"><i class="fa-solid fa-lightbulb me-2"></i>Fun Fact:</strong> Volcanic rock called pumice is the only rock on Earth that can float on water because it contains trapped air bubbles from cooling lava.
+          </div>
+        </div>
+      </div>
+
+      <!-- Canyon Row (Left Image, Right Text) -->
+      <div class="row align-items-center explore-row">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <div class="explore-img-wrap">
+            <img src="images/landscapes/canyon.jpg" alt="Grand Canyon rock layers">
+          </div>
+        </div>
+        <div class="col-md-6 ps-lg-5">
+          <span class="badge bg-success mb-2">Erosion</span>
+          <h3 class="display-6 mb-3">🧗‍♂️ Deep Carved Canyons</h3>
+          <p class="text-muted">Canyons are deep clefts between escarpments or cliffs, formed by the long-term weathering and erosive activity of a river. They expose layers of geological history, telling a visual story of billions of years of crust deposits.</p>
+          <div class="p-3 bg-light border-start border-success border-4 rounded-end shadow-sm mt-3">
+            <strong class="text-success"><i class="fa-solid fa-lightbulb me-2"></i>Fun Fact:</strong> The Grand Canyon in the USA is so vast that it creates its own microclimates. The bottom of the canyon can be up to 20°F warmer than the top rim.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Interactive Accordion (Details/Summary) -->
+  <section class="section-padding bg-light-cream">
+    <div class="container">
+      <div class="row justify-content-center text-center mb-5">
+        <div class="col-md-8">
+          <h2 class="display-5">Nature FAQ Accordion</h2>
+          <p class="text-muted">Click on the questions below to reveal the scientific answers. Powered entirely by CSS.</p>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-md-9">
+          <div class="details-group">
+            
+            <!-- Question 1 -->
+            <details>
+              <summary>🌊 Why is the ocean blue?</summary>
+              <p>The ocean is blue because water absorbs colors in the red part of the light spectrum like a filter, leaving colors in the blue part of the spectrum to travel back to our eyes. Sunlight contains all wavelengths of color, and water molecules are exceptionally good at scattering blue light while absorbing longer red wavelengths.</p>
+            </details>
+
+            <!-- Question 2 -->
+            <details>
+              <summary>🏔 Why do mountains form?</summary>
+              <p>Mountains form when tectonic plates in the Earth's crust collide, folding and pushing up landmasses (fold mountains, like the Himalayas), or when magma rises from the mantle but cools beneath the crust (dome mountains). Other types, like volcanic mountains, form from erupted lava build-up over millions of years.</p>
+            </details>
+
+            <!-- Question 3 -->
+            <details>
+              <summary>🌸 Why do cherry blossoms bloom for a short time?</summary>
+              <p>Cherry blossoms bloom for only one to two weeks to maximize the chances of insect pollination while temperatures are warming. Historically, their rapid blooming and subsequent shedding is a biological strategy to focus intense energy on reproduction during a precise weather window before deciduous green leaves take over.</p>
+            </details>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nature Statistics (Progress bars with load animation) -->
+  <section class="section-padding bg-white">
+    <div class="container">
+      <div class="row justify-content-center text-center mb-5">
+        <div class="col-md-8">
+          <h2 class="display-5">Nature Statistics</h2>
+          <p class="text-muted">A representation of key resources on our planet. Progress bars animate immediately upon page load.</p>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          
+          <!-- Ocean Coverage -->
+          <div class="mb-4">
+            <div class="d-flex justify-content-between mb-2">
+              <span class="fw-bold text-dark"><i class="fa-solid fa-water text-success me-2"></i>Earth Surface Covered by Oceans</span>
+              <span class="fw-bold text-success">71%</span>
+            </div>
+            <div class="custom-progress-bar">
+              <div class="custom-progress-fill" style="width: 71%;"></div>
+            </div>
+          </div>
+
+          <!-- Fresh Water -->
+          <div class="mb-4">
+            <div class="d-flex justify-content-between mb-2">
+              <span class="fw-bold text-dark"><i class="fa-solid fa-droplet text-success me-2"></i>Global Water that is Fresh (Available)</span>
+              <span class="fw-bold text-success">3%</span>
+            </div>
+            <div class="custom-progress-bar">
+              <div class="custom-progress-fill" style="width: 3%;"></div>
+            </div>
+          </div>
+
+          <!-- Forest Coverage -->
+          <div class="mb-4">
+            <div class="d-flex justify-content-between mb-2">
+              <span class="fw-bold text-dark"><i class="fa-solid fa-tree text-success me-2"></i>Global Land Surface Covered by Forests</span>
+              <span class="fw-bold text-success">31%</span>
+            </div>
+            <div class="custom-progress-bar">
+              <div class="custom-progress-fill" style="width: 31%;"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-section">
+    <div class="container text-center">
+      <h4 class="mb-2">Let's Discover Nature</h4>
+      <p class="text-success fw-semibold mb-2" style="font-size: 0.95rem;">Explore. Learn. Protect.</p>
+      <p class="text-white-50 small mb-4">"Every landscape tells a story. Follow the beauty of nature."</p>
+      
+      <!-- Social Icons -->
+      <div class="d-flex justify-content-center gap-4 mb-4 fs-5">
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+      </div>
+
+      <!-- Links -->
+      <div class="d-flex justify-content-center gap-3 mb-4 small">
+        <a href="#">About Us</a>
+        <span class="text-muted">|</span>
+        <a href="#">Conservation Projects</a>
+        <span class="text-muted">|</span>
+        <a href="#">Contact Us</a>
+      </div>
+
+      <p class="text-white-50 small mb-0">&copy; 2026 Let's Discover Nature. Created as a pure CSS Software Engineering showcase.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Let's Discover Nature | Gallery & Conservation</title>
+  <meta name="description" content="View stunning nature photography and learn how you can help conserve our planet. Pure CSS gallery filtering and lightboxes.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark custom-navbar fixed-top">
+    <div class="container">
+      <a class="navbar-brand logo" href="index.html">
+        Let's Discover <span class="gradient-text">Nature</span>
+      </a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-check d-none">
+      <label for="nav-toggle" class="nav-toggle-label d-lg-none">
+        <span class="hamburger"></span>
+      </label>
+      <div class="nav-menu-wrapper ms-lg-auto">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="explore.html">Explore</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="gallery.html">Gallery & Conservation</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section (Mini Hero) -->
+  <header class="hero-section" style="background-image: url('images/hero/mountains.jpg'); height: 50vh;">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title animate-scale-in">GALLERY & <span class="gradient-text">CONSERVATION</span></h1>
+      <p class="fs-4 text-light mb-0 animate-fade-in-up delay-1">"Protect the beauty you love."</p>
+    </div>
+  </header>
+
+  <!-- Masonry Gallery Section -->
+  <section class="section-padding bg-light-cream">
+    <div class="container">
+      <div class="row justify-content-center text-center mb-5">
+        <div class="col-md-8">
+          <span class="text-uppercase tracking-wider fw-bold text-success" style="font-size: 0.9rem;">Visual Collection</span>
+          <h2 class="display-5 mt-2">Nature Gallery</h2>
+          <p class="text-muted">Browse our collection. Use the filters below to sort by category. Click any image to view it full screen.</p>
+        </div>
+      </div>
+
+      <!-- CSS-Only Gallery Filter Setup -->
+      <input type="radio" id="filter-all" name="gallery-filter" class="filter-radio" checked>
+      <input type="radio" id="filter-mountains" name="gallery-filter" class="filter-radio">
+      <input type="radio" id="filter-waterfalls" name="gallery-filter" class="filter-radio">
+      <input type="radio" id="filter-oceans" name="gallery-filter" class="filter-radio">
+      <input type="radio" id="filter-forests" name="gallery-filter" class="filter-radio">
+      <input type="radio" id="filter-wildlife" name="gallery-filter" class="filter-radio">
+
+      <!-- Filter Tabs Labels -->
+      <div class="filter-tabs d-flex justify-content-center flex-wrap gap-2 mb-5">
+        <label for="filter-all">All</label>
+        <label for="filter-mountains">Mountains</label>
+        <label for="filter-waterfalls">Waterfalls</label>
+        <label for="filter-oceans">Oceans</label>
+        <label for="filter-forests">Forests</label>
+        <label for="filter-wildlife">Wildlife</label>
+      </div>
+
+      <!-- Masonry Grid -->
+      <div class="gallery-grid">
+        
+        <!-- Mountain Item -->
+        <div class="gallery-item cat-mountains">
+          <a href="#img-mountain1">
+            <img src="images/categories/mountains.jpg" alt="Mountain Landscape">
+            <div class="gallery-item-caption">
+              <h5>Alpine Peaks</h5>
+              <span>Mountains</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Ocean Item -->
+        <div class="gallery-item cat-oceans">
+          <a href="#img-ocean1">
+            <img src="images/categories/ocean.jpg" alt="Ocean Waves">
+            <div class="gallery-item-caption">
+              <h5>Deep Blue</h5>
+              <span>Oceans</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Waterfall Item -->
+        <div class="gallery-item cat-waterfalls">
+          <a href="#img-waterfall1">
+            <img src="images/categories/waterfall.jpg" alt="Waterfall">
+            <div class="gallery-item-caption">
+              <h5>Cascading Falls</h5>
+              <span>Waterfalls</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Forest Item -->
+        <div class="gallery-item cat-forests">
+          <a href="#img-forest1">
+            <img src="images/categories/forest.jpg" alt="Forest Canopy">
+            <div class="gallery-item-caption">
+              <h5>Ancient Woods</h5>
+              <span>Forests</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Wildlife Items -->
+        <div class="gallery-item cat-wildlife">
+          <a href="#img-deer">
+            <img src="images/wildlife/deer.jpg" alt="Deer in Forest">
+            <div class="gallery-item-caption">
+              <h5>Forest Deer</h5>
+              <span>Wildlife</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="gallery-item cat-wildlife">
+          <a href="#img-eagle">
+            <img src="images/wildlife/eagle.jpg" alt="Bald Eagle">
+            <div class="gallery-item-caption">
+              <h5>Soaring Eagle</h5>
+              <span>Wildlife</span>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Overlays (CSS :target trick) -->
+  <div id="img-mountain1" class="lightbox-overlay">
+    <a href="#" class="lightbox-close-area" aria-label="Close"></a>
+    <div class="lightbox-content">
+      <a href="#" class="lightbox-close-btn">&times;</a>
+      <img src="images/categories/mountains.jpg" alt="Mountain Landscape">
+      <p class="lightbox-caption">"Nature is not a place to visit, it is home."</p>
+    </div>
+  </div>
+
+  <div id="img-ocean1" class="lightbox-overlay">
+    <a href="#" class="lightbox-close-area" aria-label="Close"></a>
+    <div class="lightbox-content">
+      <a href="#" class="lightbox-close-btn">&times;</a>
+      <img src="images/categories/ocean.jpg" alt="Ocean Waves">
+      <p class="lightbox-caption">"The ocean stirs the heart, inspires the imagination and brings eternal joy to the soul."</p>
+    </div>
+  </div>
+
+  <div id="img-waterfall1" class="lightbox-overlay">
+    <a href="#" class="lightbox-close-area" aria-label="Close"></a>
+    <div class="lightbox-content">
+      <a href="#" class="lightbox-close-btn">&times;</a>
+      <img src="images/categories/waterfall.jpg" alt="Waterfall">
+      <p class="lightbox-caption">"There is a hidden message in every waterfall. It says, if you are flexible, falling will not hurt you."</p>
+    </div>
+  </div>
+
+  <div id="img-forest1" class="lightbox-overlay">
+    <a href="#" class="lightbox-close-area" aria-label="Close"></a>
+    <div class="lightbox-content">
+      <a href="#" class="lightbox-close-btn">&times;</a>
+      <img src="images/categories/forest.jpg" alt="Forest Canopy">
+      <p class="lightbox-caption">"And into the forest I go, to lose my mind and find my soul."</p>
+    </div>
+  </div>
+
+  <div id="img-deer" class="lightbox-overlay">
+    <a href="#" class="lightbox-close-area" aria-label="Close"></a>
+    <div class="lightbox-content">
+      <a href="#" class="lightbox-close-btn">&times;</a>
+      <img src="images/wildlife/deer.jpg" alt="Deer">
+      <p class="lightbox-caption">"Gentle wanderers of the ancient woods."</p>
+    </div>
+  </div>
+
+  <div id="img-eagle" class="lightbox-overlay">
+    <a href="#" class="lightbox-close-area" aria-label="Close"></a>
+    <div class="lightbox-content">
+      <a href="#" class="lightbox-close-btn">&times;</a>
+      <img src="images/wildlife/eagle.jpg" alt="Eagle">
+      <p class="lightbox-caption">"Masters of the sky, seeing the world from above."</p>
+    </div>
+  </div>
+
+  <!-- Wildlife Spotlight Section -->
+  <section class="section-padding bg-white">
+    <div class="container">
+      <div class="row justify-content-center text-center mb-5">
+        <div class="col-md-8">
+          <h2 class="display-5">Wildlife Spotlight</h2>
+          <p class="text-muted">Meet the incredible creatures that bring our ecosystems to life.</p>
+        </div>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <!-- Deer -->
+        <div class="col-lg-2 col-md-4 col-sm-6 text-center">
+          <img src="images/wildlife/deer.jpg" alt="Deer" class="rounded-circle mb-3" style="width: 120px; height: 120px; object-fit: cover; border: 4px solid var(--light-cream);">
+          <h5 class="fw-bold">Deer</h5>
+          <p class="small text-muted">Elegant herbivores crucial for seed dispersal in forests.</p>
+        </div>
+        <!-- Eagle -->
+        <div class="col-lg-2 col-md-4 col-sm-6 text-center">
+          <img src="images/wildlife/eagle.jpg" alt="Eagle" class="rounded-circle mb-3" style="width: 120px; height: 120px; object-fit: cover; border: 4px solid var(--light-cream);">
+          <h5 class="fw-bold">Eagle</h5>
+          <p class="small text-muted">Apex predators maintaining balance in their habitats.</p>
+        </div>
+        <!-- Butterfly -->
+        <div class="col-lg-2 col-md-4 col-sm-6 text-center">
+          <img src="https://images.unsplash.com/photo-1506869642237-a2be987c37d5?auto=format&fit=crop&w=600&q=80" alt="Butterfly" class="rounded-circle mb-3" style="width: 120px; height: 120px; object-fit: cover; border: 4px solid var(--light-cream);">
+          <h5 class="fw-bold">Butterfly</h5>
+          <p class="small text-muted">Essential pollinators for global plant reproduction.</p>
+        </div>
+        <!-- Panda -->
+        <div class="col-lg-2 col-md-4 col-sm-6 text-center">
+          <img src="images/wildlife/panda.jpg" alt="Panda" class="rounded-circle mb-3" style="width: 120px; height: 120px; object-fit: cover; border: 4px solid var(--light-cream);">
+          <h5 class="fw-bold">Panda</h5>
+          <p class="small text-muted">Umbrella species protecting bamboo forest ecosystems.</p>
+        </div>
+        <!-- Tiger -->
+        <div class="col-lg-2 col-md-4 col-sm-6 text-center">
+          <img src="images/wildlife/tiger.jpg" alt="Tiger" class="rounded-circle mb-3" style="width: 120px; height: 120px; object-fit: cover; border: 4px solid var(--light-cream);">
+          <h5 class="fw-bold">Tiger</h5>
+          <p class="small text-muted">Keystone species indicating healthy, robust forests.</p>
+        </div>
+      </div>
+
+      <div class="row justify-content-center mt-5">
+        <div class="col-md-8 text-center p-4 bg-light-cream rounded-4">
+          <h4 class="mb-3">Why Nature Matters</h4>
+          <p class="text-muted mb-0">Biodiversity is the foundation of human existence. From the oxygen we breathe to the water we drink and the food we eat, healthy ecosystems provide indispensable services. When we protect nature, we protect our own future.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Conservation Popups Section (Save Our Planet) -->
+  <section class="section-padding bg-dark-green text-light">
+    <div class="container">
+      <div class="row justify-content-center text-center mb-5">
+        <div class="col-md-8">
+          <h2 class="display-5 text-white">Save Our Planet</h2>
+          <p class="text-white-50">Click on the actions below to see how small changes make a massive impact.</p>
+        </div>
+      </div>
+
+      <div class="row justify-content-center g-4">
+        <div class="col-md-4">
+          <a href="#popup-trees" class="card text-center text-decoration-none border-0 h-100 p-4 hover-card" style="background-color: rgba(255,255,255,0.1); backdrop-filter: blur(5px);">
+            <div class="card-body">
+              <i class="fa-solid fa-seedling text-success fs-1 mb-3"></i>
+              <h4 class="text-white">Plant Trees</h4>
+              <span class="btn btn-outline-light btn-sm mt-3">View Impact</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="#popup-recycle" class="card text-center text-decoration-none border-0 h-100 p-4 hover-card" style="background-color: rgba(255,255,255,0.1); backdrop-filter: blur(5px);">
+            <div class="card-body">
+              <i class="fa-solid fa-recycle text-info fs-1 mb-3"></i>
+              <h4 class="text-white">Recycle</h4>
+              <span class="btn btn-outline-light btn-sm mt-3">View Impact</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="#popup-water" class="card text-center text-decoration-none border-0 h-100 p-4 hover-card" style="background-color: rgba(255,255,255,0.1); backdrop-filter: blur(5px);">
+            <div class="card-body">
+              <i class="fa-solid fa-droplet text-primary fs-1 mb-3"></i>
+              <h4 class="text-white">Save Water</h4>
+              <span class="btn btn-outline-light btn-sm mt-3">View Impact</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="row justify-content-center mt-5 text-center">
+        <div class="col-md-8">
+          <h5 class="text-white mb-3">Everyday Tips to Protect the Environment:</h5>
+          <ul class="list-unstyled text-white-50">
+            <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Reduce single-use plastics in your daily routine.</li>
+            <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Switch to energy-efficient LED lighting.</li>
+            <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Compost organic food waste.</li>
+            <li><i class="fa-solid fa-check text-success me-2"></i> Support local and sustainable businesses.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Conservation Popup Overlays (:target) -->
+  <div id="popup-trees" class="popup-overlay">
+    <a href="#" class="lightbox-close-area" aria-label="Close"></a>
+    <div class="popup-card">
+      <a href="#" class="popup-close-btn text-decoration-none">&times;</a>
+      <div class="popup-icon text-success"><i class="fa-solid fa-seedling"></i></div>
+      <h3 class="text-dark mb-3">Planting Trees</h3>
+      <p class="text-muted fs-5">A single mature tree can absorb nearly 48 pounds of carbon dioxide per year and release enough oxygen to support two human beings.</p>
+    </div>
+  </div>
+
+  <div id="popup-recycle" class="popup-overlay">
+    <a href="#" class="lightbox-close-area" aria-label="Close"></a>
+    <div class="popup-card">
+      <a href="#" class="popup-close-btn text-decoration-none">&times;</a>
+      <div class="popup-icon text-info"><i class="fa-solid fa-recycle"></i></div>
+      <h3 class="text-dark mb-3">The Power of Recycling</h3>
+      <p class="text-muted fs-5">Recycling just one aluminum can saves enough energy to run a television for three hours. It reduces landfill waste and conserves raw materials.</p>
+    </div>
+  </div>
+
+  <div id="popup-water" class="popup-overlay">
+    <a href="#" class="lightbox-close-area" aria-label="Close"></a>
+    <div class="popup-card">
+      <a href="#" class="popup-close-btn text-decoration-none">&times;</a>
+      <div class="popup-icon text-primary"><i class="fa-solid fa-droplet"></i></div>
+      <h3 class="text-dark mb-3">Water Conservation</h3>
+      <p class="text-muted fs-5">Turning off the tap while brushing your teeth can save up to 8 gallons of water a day. That's nearly 3,000 gallons a year!</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer-section">
+    <div class="container text-center">
+      <h4 class="mb-2">Let's Discover Nature</h4>
+      <p class="text-success fw-semibold mb-2" style="font-size: 0.95rem;">Explore. Learn. Protect.</p>
+      <p class="text-white-50 small mb-4">"Every landscape tells a story. Follow the beauty of nature."</p>
+      
+      <!-- Social Icons -->
+      <div class="d-flex justify-content-center gap-4 mb-4 fs-5">
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+      </div>
+
+      <!-- Links -->
+      <div class="d-flex justify-content-center gap-3 mb-4 small">
+        <a href="#">About Us</a>
+        <span class="text-muted">|</span>
+        <a href="#">Conservation Projects</a>
+        <span class="text-muted">|</span>
+        <a href="#">Contact Us</a>
+      </div>
+
+      <p class="text-white-50 small mb-0">&copy; 2026 Let's Discover Nature. Created as a pure CSS Software Engineering showcase.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

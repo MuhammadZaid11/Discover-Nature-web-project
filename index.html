@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Let's Discover Nature | Home</title>
+  <meta name="description" content="Explore the breathtaking beauty of mountains, oceans, forests, and deserts in an interactive digital nature museum. No JavaScript.">
+  <!-- Bootstrap 5 CSS (CSS only, no JS bundle) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Leaflet/Fontawesome for decorative social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark custom-navbar fixed-top">
+    <div class="container">
+      <a class="navbar-brand logo" href="index.html">
+        Let's Discover <span class="gradient-text">Nature</span>
+      </a>
+      
+      <!-- Hidden Checkbox Toggle for Mobile Nav Menu -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-check d-none">
+      
+      <!-- Hamburger Icon Label -->
+      <label for="nav-toggle" class="nav-toggle-label d-lg-none">
+        <span class="hamburger"></span>
+      </label>
+      
+      <!-- Collapsible Nav Menu -->
+      <div class="nav-menu-wrapper ms-lg-auto">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="explore.html">Explore</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gallery.html">Gallery & Conservation</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero-section" style="background-image: url('images/hero/mountains.jpg');">
+    <div class="hero-overlay"></div>
+    
+    <!-- Floating Leaves Animation -->
+    <div class="floating-leaves">
+      <svg class="leaf leaf-1" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C8.38,19.9 10.29,19.64 12,19C17.5,16.8 19.5,12 21,8H17M16,14C12.5,16 9,15 9,15C9,15 12,11.5 14,8C14,8 14.5,11.5 16,14Z"/></svg>
+      <svg class="leaf leaf-2" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C8.38,19.9 10.29,19.64 12,19C17.5,16.8 19.5,12 21,8H17M16,14C12.5,16 9,15 9,15C9,15 12,11.5 14,8C14,8 14.5,11.5 16,14Z"/></svg>
+      <svg class="leaf leaf-3" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C8.38,19.9 10.29,19.64 12,19C17.5,16.8 19.5,12 21,8H17M16,14C12.5,16 9,15 9,15C9,15 12,11.5 14,8C14,8 14.5,11.5 16,14Z"/></svg>
+      <svg class="leaf leaf-4" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C8.38,19.9 10.29,19.64 12,19C17.5,16.8 19.5,12 21,8H17M16,14C12.5,16 9,15 9,15C9,15 12,11.5 14,8C14,8 14.5,11.5 16,14Z"/></svg>
+      <svg class="leaf leaf-5" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C8.38,19.9 10.29,19.64 12,19C17.5,16.8 19.5,12 21,8H17M16,14C12.5,16 9,15 9,15C9,15 12,11.5 14,8C14,8 14.5,11.5 16,14Z"/></svg>
+    </div>
+
+    <div class="hero-content">
+      <h1 class="hero-title animate-scale-in">LET'S DISCOVER <span class="gradient-text">NATURE</span></h1>
+      <p class="fs-4 text-light mb-4 animate-fade-in-up delay-1">"Nature isn't a place to visit. It is home."</p>
+      <div class="d-flex justify-content-center gap-3 animate-fade-in-up delay-2">
+        <a href="#categories" class="btn btn-success btn-lg px-4 py-3 border-0" style="background-color: var(--forest-green);">
+          Start Exploring
+        </a>
+        <a href="#around-the-clock" class="btn btn-outline-light btn-lg px-4 py-3">
+          Watch Nature
+        </a>
+      </div>
+    </div>
+
+    <!-- Bouncing Arrow Indicator -->
+    <a href="#categories" class="scroll-down" aria-label="Scroll Down">
+      <i class="fa-solid fa-angle-down"></i>
+    </a>
+  </header>
+
+  <!-- Nature Categories Grid -->
+  <section id="categories" class="section-padding">
+    <div class="container">
+      <div class="row justify-content-center text-center mb-5">
+        <div class="col-md-8">
+          <span class="text-uppercase tracking-wider fw-bold text-success" style="font-size: 0.9rem;">Every Landscape Tells a Story</span>
+          <h2 class="display-5 mt-2 mb-3">Explore the Realms of Earth</h2>
+          <p class="text-muted fs-5">Immerse yourself in the distinct habitats that form the canvas of our planet's ecological beauty.</p>
+        </div>
+      </div>
+      
+      <div class="row g-4">
+        <!-- Mountain Card -->
+        <div class="col-md-4 col-sm-6">
+          <div class="card hover-card h-100">
+            <div class="card-img-wrapper">
+              <img src="images/categories/mountains.jpg" class="card-img-top" alt="Mountains" style="height: 250px; object-fit: cover;">
+            </div>
+            <div class="card-body">
+              <h3 class="h5 card-title">🏔 Mountains</h3>
+              <p class="card-text text-muted font-italic">"The giants that touch the clouds."</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ocean Card -->
+        <div class="col-md-4 col-sm-6">
+          <div class="card hover-card h-100">
+            <div class="card-img-wrapper">
+              <img src="images/categories/ocean.jpg" class="card-img-top" alt="Oceans" style="height: 250px; object-fit: cover;">
+            </div>
+            <div class="card-body">
+              <h3 class="h5 card-title">🌊 Oceans</h3>
+              <p class="card-text text-muted font-italic">"The heartbeat of our planet."</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Desert Card -->
+        <div class="col-md-4 col-sm-6">
+          <div class="card hover-card h-100">
+            <div class="card-img-wrapper">
+              <img src="images/categories/desert.jpg" class="card-img-top" alt="Deserts" style="height: 250px; object-fit: cover;">
+            </div>
+            <div class="card-body">
+              <h3 class="h5 card-title">🏜 Deserts</h3>
+              <p class="card-text text-muted font-italic">"Silence that hides a thousand stories."</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Waterfall Card -->
+        <div class="col-md-4 col-sm-6">
+          <div class="card hover-card h-100">
+            <div class="card-img-wrapper">
+              <img src="images/categories/waterfall.jpg" class="card-img-top" alt="Waterfalls" style="height: 250px; object-fit: cover;">
+            </div>
+            <div class="card-body">
+              <h3 class="h5 card-title">💦 Waterfalls</h3>
+              <p class="card-text text-muted font-italic">"Where gravity becomes music."</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cherry Blossom Card -->
+        <div class="col-md-4 col-sm-6">
+          <div class="card hover-card h-100">
+            <div class="card-img-wrapper">
+              <img src="images/categories/cherry_blossom.jpg" class="card-img-top" alt="Cherry Blossoms" style="height: 250px; object-fit: cover;">
+            </div>
+            <div class="card-body">
+              <h3 class="h5 card-title">🌸 Cherry Blossoms</h3>
+              <p class="card-text text-muted font-italic">"Beauty that blooms and lets go."</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Forest Card -->
+        <div class="col-md-4 col-sm-6">
+          <div class="card hover-card h-100">
+            <div class="card-img-wrapper">
+              <img src="images/categories/forest.jpg" class="card-img-top" alt="Forests" style="height: 250px; object-fit: cover;">
+            </div>
+            <div class="card-body">
+              <h3 class="h5 card-title">🌲 Forests</h3>
+              <p class="card-text text-muted font-italic">"The lungs of the Earth."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nature Mood Section (CSS-only radio hack) -->
+  <section class="section-padding bg-light-cream">
+    <div class="container">
+      <div class="row justify-content-center text-center mb-5">
+        <div class="col-md-8">
+          <h2 class="display-5">How do you feel today?</h2>
+          <p class="text-muted">Select a mood below and let nature provide your corresponding spiritual destination.</p>
+        </div>
+      </div>
+
+      <div class="mood-selector-container">
+        <!-- Hidden Radio Inputs placed before content for sibling styling -->
+        <input type="radio" id="mood-peaceful" name="mood-select" class="mood-radio" checked>
+        <input type="radio" id="mood-adventurous" name="mood-select" class="mood-radio">
+        <input type="radio" id="mood-curious" name="mood-select" class="mood-radio">
+        <input type="radio" id="mood-romantic" name="mood-select" class="mood-radio">
+
+        <!-- Mood Select Options (Labels) -->
+        <div class="mood-tabs d-flex justify-content-center flex-wrap gap-3 mb-5">
+          <label for="mood-peaceful" class="mood-label">😌 Peaceful</label>
+          <label for="mood-adventurous" class="mood-label">🔥 Adventurous</label>
+          <label for="mood-curious" class="mood-label">🤔 Curious</label>
+          <label for="mood-romantic" class="mood-label">❤️ Romantic</label>
+        </div>
+
+        <!-- Result Panels -->
+        <div class="mood-results row justify-content-center">
+          <div class="col-md-8">
+            
+            <!-- Result Peaceful -->
+            <div class="mood-result result-peaceful glass-card-dark text-center">
+              <h3 class="display-6 mb-3 text-light">🌸 Peaceful Oasis</h3>
+              <p class="fs-5 mb-4">"The spring wind whispers, and petals dance. Here, beauty blooms and lets go with complete grace, reminding us of the stillness within."</p>
+              <div class="p-3 bg-white rounded text-dark d-inline-block shadow-sm">
+                <strong>Recommended Sanctuary:</strong> Cherry Blossom Fields
+              </div>
+            </div>
+
+            <!-- Result Adventurous -->
+            <div class="mood-result result-adventurous glass-card-dark text-center">
+              <h3 class="display-6 mb-3 text-light">🏔 Alpine Summit</h3>
+              <p class="fs-5 mb-4">"Conquer towering peaks where high winds challenge your spirit. Here, you stand above the clouds, standing face-to-face with the giants of the Earth."</p>
+              <div class="p-3 bg-white rounded text-dark d-inline-block shadow-sm">
+                <strong>Recommended Sanctuary:</strong> Snowy Peaks & Cascades
+              </div>
+            </div>
+
+            <!-- Result Curious -->
+            <div class="mood-result result-curious glass-card-dark text-center">
+              <h3 class="display-6 mb-3 text-light">🌲 Deep Whispering Forests</h3>
+              <p class="fs-5 mb-4">"Listen closely to the ancient trees that communicate through subterranean mycorrhizal networks. Every rustling leaf has a story to tell."</p>
+              <div class="p-3 bg-white rounded text-dark d-inline-block shadow-sm">
+                <strong>Recommended Sanctuary:</strong> The Primeval Forest Canopy
+              </div>
+            </div>
+
+            <!-- Result Romantic -->
+            <div class="mood-result result-romantic glass-card-dark text-center">
+              <h3 class="display-6 mb-3 text-light">💧 Enchanted Waterfalls</h3>
+              <p class="fs-5 mb-4">"Watch gravity turn flowing rivers into breathtaking melodies. The misty spray and cascading flows create a timeless symphony of endless motion."</p>
+              <div class="p-3 bg-white rounded text-dark d-inline-block shadow-sm">
+                <strong>Recommended Sanctuary:</strong> The Singing Waterfall
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nature Facts Section (Load Animation stats) -->
+  <section class="section-padding bg-dark-green text-light">
+    <div class="container text-center">
+      <div class="row g-4">
+        <div class="col-md-3 col-sm-6">
+          <div class="p-4 border border-secondary rounded-4 bg-opacity-10 bg-white animate-scale-in">
+            <span class="d-block display-4 fw-bold text-success mb-2">3T+</span>
+            <span class="text-uppercase tracking-wide text-secondary">🌳 Trees on Earth</span>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="p-4 border border-secondary rounded-4 bg-opacity-10 bg-white animate-scale-in delay-1">
+            <span class="d-block display-4 fw-bold text-success mb-2">71%</span>
+            <span class="text-uppercase tracking-wide text-secondary">🌊 Oceans Cover</span>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="p-4 border border-secondary rounded-4 bg-opacity-10 bg-white animate-scale-in delay-2">
+            <span class="d-block display-4 fw-bold text-success mb-2">10k+</span>
+            <span class="text-uppercase tracking-wide text-secondary">🐦 Bird Species</span>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="p-4 border border-secondary rounded-4 bg-opacity-10 bg-white animate-scale-in delay-3">
+            <span class="d-block display-4 fw-bold text-success mb-2">8.8k</span>
+            <span class="text-uppercase tracking-wide text-secondary">🏔 Highest Peak</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Did You Know? Flip Cards -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="row justify-content-center text-center mb-5">
+        <div class="col-md-8">
+          <h2 class="display-5">Did You Know?</h2>
+          <p class="text-muted">Hover over the cards below to reveal fascinating facts about our natural world.</p>
+        </div>
+      </div>
+      
+      <div class="row g-4">
+        <!-- Ocean Flip -->
+        <div class="col-md-4">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <span class="emoji">🌊</span>
+                <h4>The Deep Oceans</h4>
+                <p class="text-white-50 mt-2">Hover to reveal</p>
+              </div>
+              <div class="flip-card-back">
+                <h4 class="mb-3">80% Unexplored</h4>
+                <p class="fs-6 px-3">More than 80% of our ocean remains completely unmapped, unobserved, and unexplored by humans.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Forest Flip -->
+        <div class="col-md-4">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <span class="emoji">🌲</span>
+                <h4>The Wood Wide Web</h4>
+                <p class="text-white-50 mt-2">Hover to reveal</p>
+              </div>
+              <div class="flip-card-back">
+                <h4 class="mb-3">Social Trees</h4>
+                <p class="fs-6 px-3">Trees communicate with each other using underground networks of fungi to share nutrients and warn of pests.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Desert Flip -->
+        <div class="col-md-4">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <span class="emoji">🌵</span>
+                <h4>Desert Extremes</h4>
+                <p class="text-white-50 mt-2">Hover to reveal</p>
+              </div>
+              <div class="flip-card-back">
+                <h4 class="mb-3">Freezing Nights</h4>
+                <p class="fs-6 px-3">Deserts can drop below freezing temperatures at night because sand cannot retain heat once the sun sets.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nature Sounds Section -->
+  <section class="section-padding bg-light-cream">
+    <div class="container">
+      <div class="row justify-content-center text-center mb-5">
+        <div class="col-md-8">
+          <h2 class="display-5">Nature Soundscapes</h2>
+          <p class="text-muted">Unwind and listen to actual nature sounds. Play, pause, or adjust volume directly using native controls.</p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Rain Sound -->
+        <div class="col-md-6 col-lg-3">
+          <div class="audio-card">
+            <div class="d-flex align-items-center mb-3">
+              <i class="fa-solid fa-cloud-showers-heavy text-success fs-3 me-3"></i>
+              <h4 class="h5 mb-0">Rain Showers</h4>
+            </div>
+            <audio controls preload="none">
+              <source src="https://www.soundjay.com/nature/sounds/rain-07.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+        </div>
+
+        <!-- Ocean Sound -->
+        <div class="col-md-6 col-lg-3">
+          <div class="audio-card">
+            <div class="d-flex align-items-center mb-3">
+              <i class="fa-solid fa-water text-success fs-3 me-3"></i>
+              <h4 class="h5 mb-0">Ocean Waves</h4>
+            </div>
+            <audio controls preload="none">
+              <source src="https://www.soundjay.com/nature/sounds/ocean-wave-1.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+        </div>
+
+        <!-- Bird Sound -->
+        <div class="col-md-6 col-lg-3">
+          <div class="audio-card">
+            <div class="d-flex align-items-center mb-3">
+              <i class="fa-solid fa-dove text-success fs-3 me-3"></i>
+              <h4 class="h5 mb-0">Forest Birds</h4>
+            </div>
+            <audio controls preload="none">
+              <source src="https://www.soundjay.com/nature/sounds/birds-isa-1.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+        </div>
+
+        <!-- Waterfall Sound -->
+        <div class="col-md-6 col-lg-3">
+          <div class="audio-card">
+            <div class="d-flex align-items-center mb-3">
+              <i class="fa-solid fa-droplet text-success fs-3 me-3"></i>
+              <h4 class="h5 mb-0">Cascading River</h4>
+            </div>
+            <audio controls preload="none">
+              <source src="https://www.soundjay.com/nature/sounds/river-1.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nature Timeline (Seasons) -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="row justify-content-center text-center mb-5">
+        <div class="col-md-8">
+          <span class="text-uppercase tracking-wider fw-bold text-success" style="font-size: 0.9rem;">The Cycle of Life</span>
+          <h2 class="display-5 mt-2">Symphony of the Seasons</h2>
+          <p class="text-muted">Nature adapts, sheds, rests, and awakens in a continuous rhythmic loop across the year.</p>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <!-- Spring -->
+        <div class="timeline-container left">
+          <div class="timeline-content">
+            <img src="images/seasons/spring.jpg" alt="Spring Season">
+            <span class="badge bg-success mb-2">Spring 🌸</span>
+            <h4>The Awakening</h4>
+            <p class="text-muted mb-0">Life emerges from hibernation. Flowers bloom, fields turn green, and the air is filled with bird songs and fresh beginnings.</p>
+          </div>
+        </div>
+
+        <!-- Summer -->
+        <div class="timeline-container right">
+          <div class="timeline-content">
+            <img src="images/seasons/summer.jpg" alt="Summer Season">
+            <span class="badge bg-warning text-dark mb-2">Summer ☀️</span>
+            <h4>The Vitality</h4>
+            <p class="text-muted mb-0">Long days under warm sunlight. Forests are thick with green canopy, and the oceans brim with active, vibrant life.</p>
+          </div>
+        </div>
+
+        <!-- Autumn -->
+        <div class="timeline-container left">
+          <div class="timeline-content">
+            <img src="images/seasons/autumn.jpg" alt="Autumn Season">
+            <span class="badge mb-2" style="background-color: var(--earth-brown);">Autumn 🍂</span>
+            <h4>The Golden Harvest</h4>
+            <p class="text-muted mb-0">Deciduous trees shed foliage, dressing landscapes in shades of orange, amber, and gold, readying the earth for rest.</p>
+          </div>
+        </div>
+
+        <!-- Winter -->
+        <div class="timeline-container right">
+          <div class="timeline-content">
+            <img src="images/seasons/winter.jpg" alt="Winter Season">
+            <span class="badge bg-info text-dark mb-2">Winter ❄️</span>
+            <h4>The Great Silence</h4>
+            <p class="text-muted mb-0">Blankets of white frost cover the ground. Nature enters a deep, quiet hibernation, conserving energy to rise again.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nature Personality Mini-Quiz (CSS-only radio hack) -->
+  <section class="section-padding bg-light-cream">
+    <div class="container">
+      <div class="row justify-content-center text-center mb-5">
+        <div class="col-md-8">
+          <h2 class="display-5">Nature Personality Quiz</h2>
+          <p class="text-muted">What do you value most in your explorations? Answer below to discover your explorer type.</p>
+        </div>
+      </div>
+
+      <div class="quiz-container">
+        <!-- Hidden Radio Inputs -->
+        <input type="radio" id="quiz-adventure" name="quiz-select" class="quiz-radio" checked>
+        <input type="radio" id="quiz-peace" name="quiz-select" class="quiz-radio">
+        <input type="radio" id="quiz-mystery" name="quiz-select" class="quiz-radio">
+
+        <!-- Question Choice Labels -->
+        <div class="quiz-tabs d-flex justify-content-center flex-wrap gap-3 mb-5">
+          <label for="quiz-adventure" class="quiz-label">🔥 Challenge & Adventure</label>
+          <label for="quiz-peace" class="quiz-label">🌸 Stillness & Peace</label>
+          <label for="quiz-mystery" class="quiz-label">🌲 Depth & Mystery</label>
+        </div>
+
+        <!-- Quiz Results -->
+        <div class="quiz-results row justify-content-center">
+          <div class="col-md-8">
+            
+            <!-- Result Adventure -->
+            <div class="quiz-result result-adventure glass-card-dark text-center">
+              <h3 class="display-6 mb-3 text-light">🏔 The Peak Conqueror</h3>
+              <p class="fs-5 mb-0">You thrive on adversity and heights. You seek panoramic views, sheer cliffs, and the thrill of thin air. Your spirit calls you to conquer the highest summits.</p>
+            </div>
+
+            <!-- Result Peace -->
+            <div class="quiz-result result-peace glass-card-dark text-center">
+              <h3 class="display-6 mb-3 text-light">🌸 The Serene Soul</h3>
+              <p class="fs-5 mb-0">You explore to find peace and quiet contemplation. You notice the delicate sway of flowers and slow-moving streams. You seek harmony with nature’s gentler elements.</p>
+            </div>
+
+            <!-- Result Mystery -->
+            <div class="quiz-result result-mystery glass-card-dark text-center">
+              <h3 class="display-6 mb-3 text-light">🌲 The Forest Mystic</h3>
+              <p class="fs-5 mb-0">You are drawn to ancient structures, heavy mist, and deep forests. You want to unravel stories hidden in the dark, damp, and beautiful corners of the woods.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nature Around the Clock -->
+  <section id="around-the-clock" class="section-padding">
+    <div class="container">
+      <div class="row justify-content-center text-center mb-5">
+        <div class="col-md-8">
+          <h2 class="display-5">Nature Around the Clock</h2>
+          <p class="text-muted">Observe how the mood of nature shifts dynamically from sunrise to nightfall.</p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Sunrise -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card hover-card h-100">
+            <div class="card-img-wrapper">
+              <img src="images/timeofday/sunrise.jpg" class="card-img-top" alt="Sunrise in Nature" style="height: 200px; object-fit: cover;">
+            </div>
+            <div class="card-body">
+              <h4 class="h5 text-success">🌅 Sunrise</h4>
+              <p class="card-text text-muted small">A new dawn brings fresh light, lifting mists from valleys while singing birds wake the sleeping forests.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Day -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card hover-card h-100">
+            <div class="card-img-wrapper">
+              <img src="images/timeofday/day.jpg" class="card-img-top" alt="Day in Nature" style="height: 200px; object-fit: cover;">
+            </div>
+            <div class="card-body">
+              <h4 class="h5 text-success">☀️ Afternoon</h4>
+              <p class="card-text text-muted small">Golden sunbeams filter through tree branches, nourishing plants and driving the active hum of daytime wildlife.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sunset -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card hover-card h-100">
+            <div class="card-img-wrapper">
+              <img src="images/timeofday/sunset.jpg" class="card-img-top" alt="Sunset in Nature" style="height: 200px; object-fit: cover;">
+            </div>
+            <div class="card-body">
+              <h4 class="h5 text-success">🌇 Sunset</h4>
+              <p class="card-text text-muted small">The sky glows with fire, amber, and purple as twilight settles. Diurnal creatures find shelter for the night.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Night -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card hover-card h-100">
+            <div class="card-img-wrapper">
+              <img src="images/timeofday/night.jpg" class="card-img-top" alt="Night in Nature" style="height: 200px; object-fit: cover;">
+            </div>
+            <div class="card-body">
+              <h4 class="h5 text-success">🌙 Night</h4>
+              <p class="card-text text-muted small">The world slows down, active daytime noise fades, and the starry sky covers landscapes in peaceful dark.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-section">
+    <div class="container text-center">
+      <h4 class="mb-2">Let's Discover Nature</h4>
+      <p class="text-success fw-semibold mb-2" style="font-size: 0.95rem;">Explore. Learn. Protect.</p>
+      <p class="text-white-50 small mb-4">"Every landscape tells a story. Follow the beauty of nature."</p>
+      
+      <!-- Social Icons -->
+      <div class="d-flex justify-content-center gap-4 mb-4 fs-5">
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+      </div>
+
+      <!-- Links -->
+      <div class="d-flex justify-content-center gap-3 mb-4 small">
+        <a href="#">About Us</a>
+        <span class="text-muted">|</span>
+        <a href="#">Conservation Projects</a>
+        <span class="text-muted">|</span>
+        <a href="#">Contact Us</a>
+      </div>
+
+      <p class="text-white-50 small mb-0">&copy; 2026 Let's Discover Nature. Created as a pure CSS Software Engineering showcase.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
