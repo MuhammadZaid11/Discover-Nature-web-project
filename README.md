@@ -1,5 +1,5 @@
-Let's Discover Nature Project
-Explore. Learn. Protect.
+<h1>Let's Discover Nature Project
+Explore. Learn. Protect.</h1>  
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/d1eaba36-bdec-4396-92e5-d9ed42561fa2" />
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/6ea61bfb-9e01-4b60-9471-177ef1fe149e" />
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/66df4d57-669c-4bf4-a4f4-b19da29b714b" />
